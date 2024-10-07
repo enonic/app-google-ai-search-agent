@@ -9,9 +9,6 @@ const triggerView = resolve('trigger.html');
 
 
 exports.responseProcessor = function (req, res) {
-
-    log.info("App config: " + JSON.stringify(app.config, null, 2));
-
     const params = {
         configID: libs.util.data.isSet(app.config["google.configID"]) ? app.config["google.configID"] : null,
         triggerID: "__googlesearch-trigger",
@@ -20,7 +17,7 @@ exports.responseProcessor = function (req, res) {
     };
 
     // We don't want this code inside Content Studio, only in live mode.
-    if (req.mode === 'live') {
+    if (req.mode === 'live' || req.mode === 'preview') {
         const metadata = libs.thymeleaf.render(view, params);
 
         // Force arrays since single values will be return as string instead of array
@@ -28,7 +25,6 @@ exports.responseProcessor = function (req, res) {
         res.pageContributions.headEnd.push(metadata);
 
         const siteConfig = libs.portal.getSiteConfig();
-        log.info("Site config: " + JSON.stringify(siteConfig, null, 2));
 
         const triggerParams = {
             imgSrc: getImageUrl(siteConfig),
