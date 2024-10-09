@@ -29,32 +29,55 @@ TIP: You may also tune the search agent on the configuration panel
 
 Once the Agent is operational, you will need a Google Cloud service account in order to access it from your website.
 
-TODO:
+1. In the Google Cloud menu, go to `IAM & Admin` -> `Service Accounts`
+2. Click `+ Create Service Account`. Give it a suitable name and click continue
+3. Give it the role `AI Viewer` and create the service account. TODO: Verify 
+4. Access the service account, and select the `Keys` tab
+5. Create a new key in JSON format. The key will then automatically be downloaded to your machine
+
+You are now ready to install the application
+
+## Install
+
+From your Enonic XP instance, install the "Google AI Search Agent" app which is available from (https://market.enonic.com/vendors/enonic/google-ai-search-agent)[Enonic Market]
 
 
+### Add service account key
 
-## File configuration
+Add the JSON key file file to your XP instance configuration folder. The file must be renamed to `service-account-data.json` before you upload it.
 
-TODO: Verify config name
+NOTE: You may optionally use a different location or file name by adding an app conf file that specifies this. Below is the default config:
 
-You must add `com.enonic.app.googlesearch.cfg` configuration file to your XP instance.
+com.enonic.app.googleaisearchagent.cfg
+`google.serviceAccountJson=${xp.home}/config/service-account-data.json`
 
-There are 2 mandatory configuration values:
-
-| Name                        | Description                           |
-|-----------------------------|---------------------------------------|
-| `google.configId`           | The Google app integration id.        |
-| `google.serviceAccountJson` | Google service account json file path |
-
-### Example
-
-```properties
-google.serviceAccountJson=${xp.home}/config/service-account-data.json
-google.configID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-```
 
 ## Site deployment
 
-Once the app is correctly installed, simply add it to your site - and optionally configure it via the available form.
+The final step is about adding the app to your site. 
 
-TODO: Form screenshot
+### Google Agent builder
+
+We need to prepare for integrating the agent with the website. Start by opening your Agent once more.
+
+1. Select the `Integrations` tab. Make sure `JWT/Oauth` is selected
+2. Type in the domain name where you will be hosting the agent, and click `ADD`
+3. Copy the configID value listed in the script, you will need it soon.
+
+You are now ready for the final step, deploying the agent to your website. 
+
+### Content Studio
+
+The final step is adding the app to your site.
+
+In Studio, open the site where you want to deploy the app.
+
+1. From the applications field, click `Add`, and select the `Google AI search agent` app.
+2. From the added search agent app, click pencil icon to configure the app
+TODO Screenshot
+3. Fill in the `configID` you grabbed in the previous step, and optionally tune the Agent visuals using the other options in the form
+4. Save and publish the changes. 
+
+You should now be able to see the AI agent on your live website!
+
+TODO Screenshot
