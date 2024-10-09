@@ -9,22 +9,23 @@ const triggerView = resolve('trigger.html');
 
 
 exports.responseProcessor = function (req, res) {
-    const params = {
-        configID: libs.util.data.isSet(app.config["google.configID"]) ? app.config["google.configID"] : null,
-        triggerID: "__googlesearch-trigger",
-        tokenServiceUrl: libs.portal.serviceUrl({service: 'token', type: 'absolute'}),
-        styleSrc: libs.portal.assetUrl({path: "/css/googlesearch.css"})
-    };
 
-    // We don't want this code inside Content Studio, only in live mode.
     if (req.mode === 'live' || req.mode === 'preview') {
+
+        const siteConfig = libs.portal.getSiteConfig();
+
+        const params = {
+            configID: siteConfig["configId"],
+            triggerID: "__googlesearch-trigger",
+            tokenServiceUrl: libs.portal.serviceUrl({service: 'token', type: 'absolute'}),
+            styleSrc: libs.portal.assetUrl({path: "/css/googlesearch.css"})
+        };
+
         const metadata = libs.thymeleaf.render(view, params);
 
         // Force arrays since single values will be return as string instead of array
         res.pageContributions.headEnd = libs.util.data.forceArray(res.pageContributions.headEnd);
         res.pageContributions.headEnd.push(metadata);
-
-        const siteConfig = libs.portal.getSiteConfig();
 
         const triggerParams = {
             imgSrc: getImageUrl(siteConfig),
