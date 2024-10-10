@@ -1,6 +1,11 @@
 <!-- Delete this file if you are building a web app -->
 <site>
   <form>
+    <input name="configId" type="TextLine">
+      <label>Config ID</label>
+      <help-text>Can be found in your Google Cloud agent integration details</help-text>
+      <occurrences maximum="1" minimum="1"/>
+    </input>
     <input name="iconContent" type="ImageSelector">
       <label>Select search button icon</label>
       <help-text>Default icon is used if you don't select any</help-text>
