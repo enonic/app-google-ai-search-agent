@@ -568,7 +568,8 @@ You may also fine-tune the search agent via the configuration tab
 </div>
 </li>
 <li>
-<p>Select the role <code>AI Viewer</code> and create the service account. TODO: Verify</p>
+<p>Select the role <code>Discovery Engine Service Agent</code> and <code>Vertex AI Service Agent</code> and create the service account.
+<span class="image"><img src="media/service-account-role.png" alt="Add roles to SA" width="561px"></span></p>
 </li>
 <li>
 <p>Open the freshly created service account, and select the <code>Keys</code> tab</p>
@@ -714,7 +715,7 @@ The AI agent icon is currently not visible in Content Studio Preview
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-11 07:48:07 UTC
+Last updated 2024-10-11 11:34:18 UTC
 </div>
 </div>
 </body>
