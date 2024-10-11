@@ -1,29 +1,13 @@
-# Google AI search widget for Enonic XP
+# Google AI search agent for Enonic sites
 
-Adds embed code for Google AI search widget to your website.
+Easily embed the Google AI search agent to Enonic sites
 
-NOTE: It only adds it in `live` mode.
+## Usage and installation
 
-## App configuration
+Visit (https://market.enonic.com/vendors/enonic/google-ai-search-engine)[Enonic Market] for downloads and documentation
 
-For the application to work you need to add `com.enonic.app.googlesearch.cfg` file to the `config` directory inside the Enonic XP home.
+## Building
 
-There are 2 mandatory configuration values:
+To build this project:
 
-| Name                        | Description                           |
-|-----------------------------|---------------------------------------|
-| `google.configId`           | The Google app integration id.        |
-| `google.serviceAccountJson` | Google service account json file path |
-
-### Example
-
-```properties
-google.serviceAccountJson=${xp.home}/config/service-account-data.json
-google.configID=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-```
-
-NOTE: you can use `${xp.home}` placeholder to refer the Enonic XP home directory in the file path.
-
-## Site configuration
-
-Additionally, you can configure widget trigger icon, animation and tooltip text in the site configuration.
+    enonic project build
