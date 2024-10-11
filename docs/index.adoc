@@ -46,7 +46,8 @@ Once the Agent is working, you must create a service account in order to access 
 +
 image:service-account.png[Chat with your search agent, 1264px]
 +
-. Select the role `AI Viewer` and create the service account. TODO: Verify
+. Select the role `Discovery Engine Service Agent` and `Vertex AI Service Agent` and create the service account.
+image:service-account-role.png[Add roles to SA, 561px]
 . Open the freshly created service account, and select the `Keys` tab
 . Create a new key in JSON format. The key will automatically be downloaded to your machine by your browser.
 +
