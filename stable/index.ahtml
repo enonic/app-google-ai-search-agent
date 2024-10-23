@@ -597,15 +597,13 @@ Look for the key file in your computer&#8217;s Downloads folder
 <h2 id="app_installation"><a class="link" href="#app_installation">App installation</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>You are now ready to install the "Google AI Search Agent" app.</p>
-</div>
-<div class="paragraph">
-<p>It is available on (<a href="https://market.enonic.com/vendors/enonic/google-ai-search-agent)">Enonic Market</a>.</p>
+<p>You are now ready to install the "Google AI Search Agent" app.
+It is available on <a href="https://market.enonic.com/vendors/enonic/google-ai-search-agent">Enonic Market</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="add_service_account_key"><a class="link" href="#add_service_account_key">Add service account key</a></h3>
 <div class="paragraph">
-<p>You must now add the JSON key file file to your XP configurasjon. This will allow the application to communicate with Google.</p>
+<p>You must now add the JSON key file to your XP configurasjon. This will allow the application to communicate with Google.</p>
 </div>
 <div class="paragraph">
 <p>Rename the JSON key file to <code>google-service-account.json</code> and place it in your XP configuration folder.</p>
@@ -676,7 +674,7 @@ Look for the key file in your computer&#8217;s Downloads folder
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-The AI agent icon is currently not visible in Content Studio Preview
+The AI agent icon is currently hidden in Content Studio Preview.
 </td>
 </tr>
 </table>
@@ -715,7 +713,7 @@ The AI agent icon is currently not visible in Content Studio Preview
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-11 11:34:18 UTC
+Last updated 2024-10-23 13:57:03 UTC
 </div>
 </div>
 </body>
