@@ -1,18 +1,18 @@
-# Google AI search agent for Enonic sites
+= Google AI search agent for Enonic sites
 :toc: right
 :imagesdir: media
 :experimental:
 Embed the Google AI search agent on your Enonic sites
 
-## Introduction
+== Introduction
 
-Googles AI agent is a RAG based AI that optimizes it's answers on content from your website. 
+Googles AI agent is a RAG based AI that optimizes it's answers on content from your website.
 
 This application exposes the agent via a customizable icon on all pages of your website.
 
 TODO: Screenshot
 
-## AI agent setup
+== AI agent setup
 
 Follow the steps below to create an AI agent that will use the content of your web site.
 
@@ -31,13 +31,13 @@ NOTE: You may need to verify your ownership of the website, follow the instructi
 +
 image:verify-domain.png[Notification to verify domain, 873px]
 +
-. Once the datastore is fully indexed (may take quite a while) you can try the agent from the preview panel. 
+. Once the datastore is fully indexed (may take quite a while) you can try the agent from the preview panel.
 +
 image:agent-preview.png[Chat with your search agent, 1264px]
 
 TIP: You may also fine-tune the search agent via the configuration tab
 
-## Service account setup
+== Service account setup
 
 Once the Agent is working, you must create a service account in order to access it safely.
 
@@ -54,20 +54,19 @@ image:service-account-role.png[Add roles to SA, 561px]
 TIP: Look for the key file in your computer's Downloads folder
 
 
-## App installation
+== App installation
 
-You are now ready to install the "Google AI Search Agent" app. 
+You are now ready to install the "Google AI Search Agent" app.
+It is available on https://market.enonic.com/vendors/enonic/google-ai-search-agent[Enonic Market].
 
-It is available on (https://market.enonic.com/vendors/enonic/google-ai-search-agent)[Enonic Market].
 
+=== Add service account key
 
-### Add service account key
-
-You must now add the JSON key file file to your XP configurasjon. This will allow the application to communicate with Google.
+You must now add the JSON key file to your XP configurasjon. This will allow the application to communicate with Google.
 
 Rename the JSON key file to `google-service-account.json` and place it in your XP configuration folder.
 
-[NOTE] 
+[NOTE]
 ====
 Optionally specify a different location or file name by adding an app configuration file that overrides the default location:
 
@@ -79,11 +78,11 @@ google.serviceAccountJson=${xp.home}/config/custom-service-file.json
 
 ====
 
-## Site deployment
+== Site deployment
 
-The final step is about adding the app to your site. 
+The final step is about adding the app to your site.
 
-### Agent builder integration
+=== Agent builder integration
 
 Start by opening your Agent in Google Cloud one final time
 
@@ -96,11 +95,11 @@ image:integration.png[Security setup, 1072px]
 +
 image:configid.png[Copy configId value from script, 797px]
 
-### Content Studio
+=== Content Studio
 
 The final step is adding the app to your site.
 
-NOTE: The AI agent icon is currently not visible in Content Studio Preview
+NOTE: The AI agent icon is currently hidden in Content Studio Preview.
 
 In Content Studio, open the site where you want to deploy the search agent.
 
@@ -110,7 +109,7 @@ In Content Studio, open the site where you want to deploy the search agent.
 +
 image:siteconfig.png[Site configuration form, 895px]
 +
-. Save and publish the changes. 
+. Save and publish the changes.
 
 You should now be able to see the AI agent on your live website!
 
