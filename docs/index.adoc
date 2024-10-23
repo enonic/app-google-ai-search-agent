@@ -10,8 +10,6 @@ Googles AI agent is a RAG based AI that optimizes it's answers on content from y
 
 This application exposes the agent via a customizable icon on all pages of your website.
 
-TODO: Screenshot
-
 == AI agent setup
 
 Follow the steps below to create an AI agent that will use the content of your web site.
