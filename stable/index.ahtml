@@ -467,7 +467,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="introduction"><a class="link" href="#introduction">Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Googles AI agent is a RAG based AI that optimizes it&#8217;s answers on content from your website.</p>
+<p>Google&#8217;s AI agent is a RAG-based AI that optimizes its answers on content from your website.</p>
 </div>
 <div class="paragraph">
 <p>This application exposes the agent via a customizable icon on all pages of your website.</p>
@@ -559,7 +559,7 @@ You may also fine-tune the search agent via the configuration tab
 <p>In the Google Cloud menu, go to <code>IAM &amp; Admin</code> &#8594; <code>Service Accounts</code></p>
 </li>
 <li>
-<p>Click <b class="button">+ CREATE SERVICE ACCCOUNT</b>. Give it a suitable name and continue</p>
+<p>Click <b class="button">+ CREATE SERVICE ACCOUNT</b>. Give it a suitable name and continue</p>
 <div class="paragraph">
 <p><span class="image"><img src="media/service-account.png" alt="Chat with your search agent" width="1264px"></span></p>
 </div>
@@ -710,7 +710,7 @@ The AI agent icon is currently hidden in Content Studio Preview.
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-10-23 14:09:41 UTC
+Last updated 2024-10-23 14:24:20 UTC
 </div>
 </div>
 </body>
