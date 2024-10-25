@@ -4,7 +4,7 @@ Easily embed the Google AI search agent to Enonic sites
 
 ## Usage and installation
 
-Visit https://market.enonic.com/vendors/enonic/google-ai-search-engine[Enonic Market] for downloads and documentation
+Visit [Enonic Market](https://market.enonic.com/vendors/enonic/google-ai-search-engine) for downloads and documentation
 
 ## Building
 
