@@ -18,7 +18,8 @@ exports.responseProcessor = function (req, res) {
             configID: siteConfig["configId"],
             triggerID: "__googlesearch-trigger",
             tokenServiceUrl: libs.portal.serviceUrl({service: 'token', type: 'absolute'}),
-            styleSrc: libs.portal.assetUrl({path: "/css/googlesearch.css"})
+            styleSrc: libs.portal.assetUrl({path: "/css/googlesearch.css"}),
+            inputPlaceholder: siteConfig["inputPlaceholder"] || 'Search here...',
         };
 
         const metadata = libs.thymeleaf.render(view, params);
