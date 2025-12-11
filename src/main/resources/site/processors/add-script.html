@@ -6,9 +6,9 @@
 <!-- Search widget element is not visible by default -->
 <gen-search-widget data-th-configId="${configID}"
                    data-th-triggerId="${triggerID}"
-                   data-th-placeholder="${inputPlaceholder}">
+                   data-th-placeholder="${#strings.isEmpty(inputPlaceholder) ? null : inputPlaceholder}"
+                   data-th-location="${#strings.isEmpty(location) ? null : location}">
 </gen-search-widget>
-
 
 <script th:inline="javascript">
     /*<![CDATA[*/

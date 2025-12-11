@@ -36,8 +36,17 @@
       <label>Icon tooltip</label>
       <occurrences maximum="1" minimum="0"/>
     </input>
+    <input name="location" type="TextLine">
+      <label>Location</label>
+      <help-text>Two-letter region identifier ('us' or 'eu') </help-text>
+      <occurrences maximum="1" minimum="0"/>
+      <config>
+        <regexp>^[a-z]{2}$</regexp>
+      </config>
+    </input>
     <input name="inputPlaceholder" type="TextLine">
-      <label>Input placeholder text</label>
+      <label>Input placeholder</label>
+      <help-text>Placeholder text for the search input field</help-text>
       <occurrences maximum="1" minimum="0"/>
     </input>
   </form>

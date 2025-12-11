@@ -20,6 +20,7 @@ exports.responseProcessor = function (req, res) {
             tokenServiceUrl: libs.portal.serviceUrl({service: 'token', type: 'absolute'}),
             styleSrc: libs.portal.assetUrl({path: "/css/googlesearch.css"}),
             inputPlaceholder: siteConfig["inputPlaceholder"] || 'Search here...',
+            location: siteConfig["location"],
         };
 
         const metadata = libs.thymeleaf.render(view, params);
