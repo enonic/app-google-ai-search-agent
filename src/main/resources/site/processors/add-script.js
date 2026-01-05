@@ -17,7 +17,7 @@ exports.responseProcessor = function (req, res) {
         const params = {
             configID: siteConfig["configId"],
             triggerID: "__googlesearch-trigger",
-            tokenServiceUrl: libs.portal.serviceUrl({service: 'token', type: 'absolute'}),
+            tokenServiceUrl: libs.portal.serviceUrl({service: 'token'}),
             styleSrc: libs.portal.assetUrl({path: "/css/googlesearch.css"}),
             inputPlaceholder: siteConfig["inputPlaceholder"] || 'Search here...',
             location: siteConfig["location"],
