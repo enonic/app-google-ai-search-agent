@@ -5,12 +5,6 @@ plugins {
     id 'com.enonic.defaults' version '2.1.6'
 }
 
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(25)
-    }
-}
-
 dependencies {
     implementation xplibs.api.core
     implementation xplibs.api.portal
