@@ -1,0 +1,67 @@
+kind: "CMS"
+form:
+  - type: "TextLine"
+    name: "configId"
+    label: "Config ID"
+    helpText: "Can be found in your Google Cloud agent integration details"
+    occurrences:
+      min: 1
+      max: 1
+  - type: "ImageSelector"
+    name: "iconContent"
+    label: "Select search button icon"
+    helpText: "Default icon is used if you don't select any"
+    occurrences:
+      min: 0
+      max: 1
+  - type: "RadioButton"
+    name: "iconScale"
+    label: "Icon scale"
+    occurrences:
+      min: 1
+      max: 1
+    options:
+      - value: "small"
+        label: "Small"
+      - value: "medium"
+        label: "Medium"
+      - value: "large"
+        label: "Large"
+      - value: "original"
+        label: "Original"
+    default: "small"
+  - type: "Checkbox"
+    name: "cssAnimation"
+    label: "Animate icon"
+    helpText: "Add pulse animation to the icon"
+    occurrences:
+      min: 0
+      max: 1
+    default: "checked"
+  - type: "TextLine"
+    name: "iconText"
+    label: "Text to show below icon"
+    occurrences:
+      min: 0
+      max: 1
+  - type: "TextLine"
+    name: "iconTooltip"
+    label: "Icon tooltip"
+    occurrences:
+      min: 0
+      max: 1
+  - type: "TextLine"
+    name: "location"
+    label: "Location"
+    helpText: "Two-letter region identifier ('us' or 'eu') "
+    occurrences:
+      min: 0
+      max: 1
+    regexp: "^[a-z]{2}$"
+  - type: "TextLine"
+    name: "inputPlaceholder"
+    label: "Input placeholder"
+    helpText: "Placeholder text for the search input field"
+    occurrences:
+      min: 0
+      max: 1

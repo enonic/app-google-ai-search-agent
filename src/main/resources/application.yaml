@@ -1,0 +1,5 @@
+kind: "Application"
+title: "Google AI search agent"
+description: "RAG-based AI using your website content"
+vendorName: "Enonic AS"
+vendorUrl: "https://enonic.com"
