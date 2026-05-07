@@ -3,6 +3,7 @@ package com.enonic.app.googlesearch;
 import java.io.File;
 import java.io.IOException;
 
+import org.osgi.framework.FrameworkUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,7 +29,7 @@ public class GoogleAuth
     {
         try
         {
-            Application app = this.appService.get( ApplicationKey.from( getClass() ) );
+            Application app = this.appService.get( ApplicationKey.from( FrameworkUtil.getBundle( getClass() ).getSymbolicName() ) );
             String path = app.getConfig()
                 .getOrDefault( "google.serviceAccountJson", DEFAULT_JSON_PATH.replace( "${xp.home}", HomeDir.get().toString() ) );
 
