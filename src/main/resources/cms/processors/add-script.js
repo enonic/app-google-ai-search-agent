@@ -1,5 +1,6 @@
 const libs = {
     portal: require('/lib/xp/portal'),
+    asset: require('/lib/enonic/asset'),
     thymeleaf: require('/lib/thymeleaf')
 };
 
@@ -17,7 +18,7 @@ exports.responseProcessor = function (req, res) {
             configID: siteConfig["configId"],
             triggerID: "__googlesearch-trigger",
             tokenServiceUrl: libs.portal.serviceUrl({service: 'token'}),
-            styleSrc: libs.portal.assetUrl({path: "/css/googlesearch.css"}),
+            styleSrc: libs.asset.assetUrl({path: "/css/googlesearch.css"}),
             inputPlaceholder: siteConfig["inputPlaceholder"] || 'Search here...',
             location: siteConfig["location"],
         };
@@ -57,7 +58,7 @@ function getImageUrl(siteConfig) {
         imageUrl = libs.portal.attachmentUrl({id: imageContent, download: false});
     }
     if (!imageUrl) {
-        imageUrl = libs.portal.assetUrl({path: "/img/stars.svg"})
+        imageUrl = libs.asset.assetUrl({path: "/img/stars.svg"})
     }
     return imageUrl;
 }
