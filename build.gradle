@@ -14,6 +14,8 @@ dependencies {
     include xplibs.context
     include xplibs.admin
 
+    include "com.enonic.lib:lib-asset:2.0.0-SNAPSHOT"
+
     include libs.lib.thymeleaf
 
     include 'com.google.auth:google-auth-library-oauth2-http:1.47.0'

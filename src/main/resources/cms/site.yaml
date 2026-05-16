@@ -2,3 +2,5 @@ kind: "Site"
 processors:
   - name: "add-script"
     order: 10
+apis:
+  - "asset"
