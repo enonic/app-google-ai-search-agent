@@ -15,7 +15,6 @@ dependencies {
     include xplibs.admin
 
     include libs.lib.thymeleaf
-    include libs.lib.util
 
     include 'com.google.auth:google-auth-library-oauth2-http:1.47.0'
 }

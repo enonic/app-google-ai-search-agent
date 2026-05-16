@@ -1,7 +1,6 @@
 const libs = {
     portal: require('/lib/xp/portal'),
-    thymeleaf: require('/lib/thymeleaf'),
-    util: require('/lib/util')
+    thymeleaf: require('/lib/thymeleaf')
 };
 
 const view = resolve('add-script.html');
@@ -26,7 +25,7 @@ exports.responseProcessor = function (req, res) {
         const metadata = libs.thymeleaf.render(view, params);
 
         // Force arrays since single values will be return as string instead of array
-        res.pageContributions.headEnd = libs.util.data.forceArray(res.pageContributions.headEnd);
+        res.pageContributions.headEnd = Array.isArray(res.pageContributions.headEnd) ? res.pageContributions.headEnd : [res.pageContributions.headEnd];
         res.pageContributions.headEnd.push(metadata);
 
         const triggerParams = {
@@ -39,7 +38,7 @@ exports.responseProcessor = function (req, res) {
         };
         const triggerHtml = libs.thymeleaf.render(triggerView, triggerParams);
 
-        res.pageContributions.bodyEnd = libs.util.data.forceArray(res.pageContributions.bodyEnd);
+        res.pageContributions.bodyEnd = Array.isArray(res.pageContributions.bodyEnd) ? res.pageContributions.bodyEnd : [res.pageContributions.bodyEnd];
         res.pageContributions.bodyEnd.push(triggerHtml);
     }
 
