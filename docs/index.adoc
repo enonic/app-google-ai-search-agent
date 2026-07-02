@@ -4,6 +4,8 @@
 :experimental:
 Embed the Google AI search agent on your Enonic sites
 
+NOTE: Versions 1.x target XP 7+.
+
 == Introduction
 
 Google's AI agent is a RAG-based AI that optimizes its answers on content from your website.
